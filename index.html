@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open WhatsApp</title>
+</head>
+<body>
+    <h1>Open WhatsApp Example</h1>
+    <button id="open-whatsapp">Open WhatsApp</button>
+
+    <script>
+        document.getElementById('open-whatsapp').addEventListener('click', function() {
+            const message = encodeURIComponent("Hello from my website!");
+            const phoneNumber = '918976804674'; // Replace with the correct international phone number
+            const url = `https://wa.me/${phoneNumber}?text=${message}`;
+            
+            // Debugging: Log the URL to the console
+            console.log("Opening URL: ", url);
+
+            // Open the WhatsApp URL in a new tab
+            window.open(url, '_blank');
+        });
+    </script>
+</body>
+</html>
